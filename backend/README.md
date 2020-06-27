@@ -94,9 +94,9 @@ GET '/categories'
 '6' : "Sports"}
 ```
 
-GET /questions
--Returns a list of question objects, success value, and total number of questions
--Results are paginated in groups of 10. Inclue a request argument to choose page number, starting from 1.
+GET '/questions'
+- Returns a list of question objects, success value, and total number of questions
+- Results are paginated in groups of 10. Inclue a request argument to choose page number, starting from 1.
 ```
 {
   "categories": [
@@ -194,9 +194,9 @@ GET /questions
 }
 ```
 
-GET /category/{category_id}/questions
--Returns a list of book objects for the category id specified, success value, current category type, and total number of questions in the category.
--Results are paginated in groups of 10. Include a request argument to choose page number, starting from 1.
+GET '/category/{category_id}/questions'
+- Returns a list of book objects for the category id specified, success value, current category type, and total number of questions in the category.
+- Results are paginated in groups of 10. Include a request argument to choose page number, starting from 1.
 ```
 {
   "current_category": "Science",
@@ -226,8 +226,8 @@ GET /category/{category_id}/questions
   "total_questions": 3
 }
 ```
-POST /questions:
--Creates a new question using the submitted question, answer, category, and difficulty. Returns the ide of the created book, success value, total books, and question list.
+POST '/questions'
+- Creates a new question using the submitted question, answer, category, and difficulty. Returns the ide of the created book, success value, total books, and question list.
 ```
 {
   "created": 32,
@@ -306,9 +306,9 @@ POST /questions:
   "total_questions": 20
 }
 ```
-POST /questions/search
--Returns a list of book objects for the search term provided, success value, and total number of questions returned.
--Results are paginated in groups of 10. Include a request argument to choose page number, starting from 1.
+POST '/questions/search'
+- Returns a list of book objects for the search term provided, success value, and total number of questions returned.
+- Results are paginated in groups of 10. Include a request argument to choose page number, starting from 1.
 ```
 {
   "questions": [
@@ -324,9 +324,9 @@ POST /questions/search
 }
 ```
 
-POST /quizzes
--Picks a random question for the trivia game quiz play using the quiz category and previous questions asked.
--Returns a question object, success value, previous questions asked, and quiz category.
+POST '/quizzes'
+- Picks a random question for the trivia game quiz play using the quiz category and previous questions asked.
+- Returns a question object, success value, previous questions asked, and quiz category.
 ```
 {
   "category_id": 1,
@@ -341,8 +341,8 @@ POST /quizzes
   "success": true
 }
 ```
-DELETE /questions/{question_id}
--Deletes the question lof the given ID if it exists. Returns the id of the deleted question and success value. The frontend is updated to show the new list of questions based on the page that was selected.
+DELETE '/questions/{question_id}'
+- Deletes the question lof the given ID if it exists. Returns the id of the deleted question and success value. The frontend is updated to show the new list of questions based on the page that was selected.
 ```
 {
     "deleted": 33,
@@ -362,7 +362,7 @@ Errors are returned as JSON objects in the following format:
 ```
 The API will return three error types when requests fail:
 
-400:  Bad Request
-404:  not found
-422:  Unprocessable
-500:  Server Error
+- 400:  Bad Request
+- 404:  not found
+- 422:  Unprocessable
+- 500:  Server Error
