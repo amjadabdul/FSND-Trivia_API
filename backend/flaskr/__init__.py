@@ -165,7 +165,7 @@ def create_app(test_config=None):
   categories in the left column will cause only questions of that 
   category to be shown. 
   '''
-  @app.route('/categories/<int:category_id>/questions', methodS=['GET'])
+  @app.route('/categories/<int:category_id>/questions', methods=['GET'])
   def get_category_questions(category_id):
         try:
             questions = Question.query.order_by(
