@@ -350,7 +350,8 @@ DELETE '/questions/{question_id}'
 }
 ```
 
-## Testing
+## Error Handling
+
 Errors are returned as JSON objects in the following format:
 
 ```
@@ -360,9 +361,9 @@ Errors are returned as JSON objects in the following format:
     "message": "Bad Request"
 }
 ```
-The API will return three error types when requests fail:
 
 - 400:  Bad Request
 - 404:  not found
 - 422:  Unprocessable
 - 500:  Server Error
+
